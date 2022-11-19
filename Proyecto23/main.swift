@@ -8,4 +8,10 @@
 import Foundation
 
 print("Hello, World!")
+var matr1 = matriz(filas: 3, columnas: 3)
+matr1.imprimirMatriz()
+matr1.modificarElemento(filas: 2, columnas: 2, nuevoElemento: 10)
+print("")
+matr1.imprimirMatriz()
+
 
