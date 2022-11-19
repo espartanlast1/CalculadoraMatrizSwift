@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF6B27982929A13A00E9D0F0 /* operacionesMatriciales.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B27972929A13A00E9D0F0 /* operacionesMatriciales.swift */; };
 		CFAFC70129296E4800945A38 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFC70029296E4800945A38 /* main.swift */; };
 		CFAFC70829296E9100945A38 /* matriz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFC70729296E9100945A38 /* matriz.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CF6B27972929A13A00E9D0F0 /* operacionesMatriciales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operacionesMatriciales.swift; sourceTree = "<group>"; };
 		CFAFC6FD29296E4800945A38 /* Proyecto23 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proyecto23; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAFC70029296E4800945A38 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CFAFC70729296E9100945A38 /* matriz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matriz.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				CFAFC70029296E4800945A38 /* main.swift */,
 				CFAFC70729296E9100945A38 /* matriz.swift */,
+				CF6B27972929A13A00E9D0F0 /* operacionesMatriciales.swift */,
 			);
 			path = Proyecto23;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6B27982929A13A00E9D0F0 /* operacionesMatriciales.swift in Sources */,
 				CFAFC70829296E9100945A38 /* matriz.swift in Sources */,
 				CFAFC70129296E4800945A38 /* main.swift in Sources */,
 			);
