@@ -15,7 +15,7 @@ class matriz{
         self.filas = filas+1
         self.columnas = columnas+1
         let iteraciones = (self.columnas*self.filas)
-        for _ in 0...iteraciones{
+        for _ in 0..<iteraciones{
             self.datos.append(0)
         }
     }

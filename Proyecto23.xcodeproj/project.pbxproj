@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0A6552292C31AD00BA1D78 /* MTLoperacionesMatriciales.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A6551292C31AD00BA1D78 /* MTLoperacionesMatriciales.swift */; };
 		CF6B27982929A13A00E9D0F0 /* operacionesMatriciales.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B27972929A13A00E9D0F0 /* operacionesMatriciales.swift */; };
 		CFAFC70129296E4800945A38 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFC70029296E4800945A38 /* main.swift */; };
 		CFAFC70829296E9100945A38 /* matriz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFC70729296E9100945A38 /* matriz.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CF0A6551292C31AD00BA1D78 /* MTLoperacionesMatriciales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLoperacionesMatriciales.swift; sourceTree = "<group>"; };
 		CF6B27972929A13A00E9D0F0 /* operacionesMatriciales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operacionesMatriciales.swift; sourceTree = "<group>"; };
 		CFAFC6FD29296E4800945A38 /* Proyecto23 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proyecto23; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAFC70029296E4800945A38 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				CFAFC70029296E4800945A38 /* main.swift */,
+				CF0A6551292C31AD00BA1D78 /* MTLoperacionesMatriciales.swift */,
 				CFAFC70729296E9100945A38 /* matriz.swift */,
 				CF6B27972929A13A00E9D0F0 /* operacionesMatriciales.swift */,
 			);
@@ -96,7 +99,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					CFAFC6FC29296E4800945A38 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6B27982929A13A00E9D0F0 /* operacionesMatriciales.swift in Sources */,
+				CF0A6552292C31AD00BA1D78 /* MTLoperacionesMatriciales.swift in Sources */,
 				CFAFC70829296E9100945A38 /* matriz.swift in Sources */,
 				CFAFC70129296E4800945A38 /* main.swift in Sources */,
 			);
@@ -168,6 +172,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -228,6 +233,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -251,7 +257,9 @@
 		CFAFC70529296E4800945A38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -260,7 +268,9 @@
 		CFAFC70629296E4800945A38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
