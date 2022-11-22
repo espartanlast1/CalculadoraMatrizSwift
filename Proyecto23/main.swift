@@ -5,6 +5,8 @@
 //  Created by Jorge Castilla on 19/11/22.
 //
 
+import Foundation
+
 
 
 print("Hello, World!")
@@ -15,13 +17,20 @@ print("")
 matr1.imprimirMatriz()
 var op1 = operacionesMatriciales()
 op1.sumarMatrices(matriz1: matr1, matriz2: matr1).imprimirMatriz()
+
+
 var mtl1 = MTLoperacionesMatriciales()
-var matr2 = matriz(filas: 1, columnas: 1)
+var matr2 = matriz(filas: 9999, columnas: 9999)
 for i in 0..<matr2.datos.count{
     matr2.datos[i] = Int.random(in: 1..<100)
 }
-matr2.imprimirMatriz()
-mtl1.multiplicacionMatrices(matriz1: matr2, matriz2: matr2).imprimirMatriz()
+
+let start = DispatchTime.now()
+mtl1.multiplicacionMatrices(matriz1: matr2, matriz2: matr2)
+let end = DispatchTime.now()
+let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
+let timeInterval = Double(nanoTime) / 1_000_000_000
+print(timeInterval)
 readLine()
 
 

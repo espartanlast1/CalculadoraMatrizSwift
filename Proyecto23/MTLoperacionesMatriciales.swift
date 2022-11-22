@@ -18,16 +18,29 @@ class MTLoperacionesMatriciales{
         let resultColumns = matriz2.columnas
         let interiorColumns = matriz1.columnas
         
+        let group = DispatchGroup()
+        
         var Matriz1Float = [Float32]()
-        for i in 0..<matriz1.datos.capacity{
-            Matriz1Float.append(Float32(matriz1.datos[i]))
-        }
-        
+        group.enter()
+            //async operation 1
+            DispatchQueue.global(qos: .userInitiated).async {
+                for i in 0..<matriz1.datos.count{
+                    Matriz1Float.append(Float32(matriz1.datos[i]))
+                }
+                group.leave()
+            }
+ 
         var Matriz2Float = [Float32]()
-        for i in 0..<matriz2.datos.capacity{
-            Matriz2Float.append(Float32(matriz2.datos[i]))
-        }
+        group.enter()
+            //async operation 2
+            DispatchQueue.global(qos: .userInitiated).async {
+                for i in 0..<matriz2.datos.count{
+                    Matriz2Float.append(Float32(matriz2.datos[i]))
+                }
+                group.leave()
+            }
         
+        group.wait()
 
         let mmKernel = MPSMatrixMultiplication(device: device!,
                                                transposeLeft: false,
@@ -38,15 +51,15 @@ class MTLoperacionesMatriciales{
                                                alpha: 1.0,
                                                beta: 0.0)
         
-        let totalBytes = MemoryLayout<Float32>.stride * matriz1.datos.capacity
+        let totalBytes = MemoryLayout<Float32>.stride * matriz1.datos.count
         let bufferA = device?.makeBuffer(bytes: Matriz1Float, length: totalBytes, options: .storageModeShared)
         let descriptorA = MPSMatrixDescriptor(rows: matriz1.filas, columns: matriz1.columnas, rowBytes: (totalBytes / matriz1.filas), dataType: .float32)
         
         let A = MPSMatrix(buffer: bufferA!, descriptor: descriptorA)
         
         
-        let totalBytesB = MemoryLayout<Float32>.stride * matriz2.datos.capacity
-        let bufferB = device?.makeBuffer(bytes: Matriz2Float, length: totalBytes, options: .storageModeShared)
+        let totalBytesB = MemoryLayout<Float32>.stride * matriz2.datos.count
+        let bufferB = device?.makeBuffer(bytes: Matriz2Float, length: totalBytesB, options: .storageModeShared)
         let descriptorB = MPSMatrixDescriptor(rows: matriz2.filas, columns: matriz2.columnas, rowBytes: totalBytesB / matriz2.filas, dataType: .float32)
         
         let B = MPSMatrix(buffer: bufferB!, descriptor: descriptorB)
@@ -74,9 +87,10 @@ class MTLoperacionesMatriciales{
         let resultado = matriz(filas: resultRows-1, columnas: resultColumns-1)
         
         var resultadoInt = [NSInteger]()
-        for i in 0..<output.capacity{
+        for i in 0..<output.count{
             resultadoInt.append(Int(output[i]))
         }
+
         
         resultado.datos = resultadoInt
         return resultado
