@@ -11,6 +11,8 @@
 		CF6B27982929A13A00E9D0F0 /* operacionesMatriciales.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B27972929A13A00E9D0F0 /* operacionesMatriciales.swift */; };
 		CFAFC70129296E4800945A38 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFC70029296E4800945A38 /* main.swift */; };
 		CFAFC70829296E9100945A38 /* matriz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFC70729296E9100945A38 /* matriz.swift */; };
+		CFF24E14292E86C800E0C616 /* SMIDoperacionesMatriciales.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF24E13292E86C800E0C616 /* SMIDoperacionesMatriciales.swift */; };
+		CFF24E16292E8D2100E0C616 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF24E15292E8D2100E0C616 /* menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,8 @@
 		CFAFC6FD29296E4800945A38 /* Proyecto23 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proyecto23; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAFC70029296E4800945A38 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CFAFC70729296E9100945A38 /* matriz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matriz.swift; sourceTree = "<group>"; };
+		CFF24E13292E86C800E0C616 /* SMIDoperacionesMatriciales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMIDoperacionesMatriciales.swift; sourceTree = "<group>"; };
+		CFF24E15292E8D2100E0C616 /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				CFAFC70029296E4800945A38 /* main.swift */,
+				CFF24E15292E8D2100E0C616 /* menu.swift */,
 				CF0A6551292C31AD00BA1D78 /* MTLoperacionesMatriciales.swift */,
 				CFAFC70729296E9100945A38 /* matriz.swift */,
 				CF6B27972929A13A00E9D0F0 /* operacionesMatriciales.swift */,
+				CFF24E13292E86C800E0C616 /* SMIDoperacionesMatriciales.swift */,
 			);
 			path = Proyecto23;
 			sourceTree = "<group>";
@@ -130,6 +136,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6B27982929A13A00E9D0F0 /* operacionesMatriciales.swift in Sources */,
+				CFF24E14292E86C800E0C616 /* SMIDoperacionesMatriciales.swift in Sources */,
+				CFF24E16292E8D2100E0C616 /* menu.swift in Sources */,
 				CF0A6552292C31AD00BA1D78 /* MTLoperacionesMatriciales.swift in Sources */,
 				CFAFC70829296E9100945A38 /* matriz.swift in Sources */,
 				CFAFC70129296E4800945A38 /* main.swift in Sources */,
